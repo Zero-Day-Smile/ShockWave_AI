@@ -90,3 +90,6 @@ butterfly-simulator/
 | POST | /predict/explain | SHAP explanation + narrative |
 | GET | /crises/library | Historical crisis library |
 | WS | /simulate/stream | Real-time step streaming |
+=======
+# Butterfly-Simulator
+>>>>>>> a73553747041772b0f741c38d8aa16b5372d8ad4
