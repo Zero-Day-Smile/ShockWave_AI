@@ -19,27 +19,34 @@ services:
     rootDir: backend
     ports:
       - 8000
-    dependsOn:
-      - shockwave-redis
+    services:
+      - type: web
+        name: shockwave-backend
+        env: python
+        buildCommand: pip install -r requirements.txt
+        startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
+        plan: free
+        envVars:
+          - key: REDIS_URL
+            value: redis://shockwave-redis:6379
+          - key: FRED_API_KEY
+            sync: false
+        autoDeploy: true
+        buildFilter:
+          paths:
+            - backend/**
 
-  - type: web
-    name: shockwave-frontend
-    env: node
-    buildCommand: npm install
-    startCommand: npm run dev -- --host
-    plan: free
-    autoDeploy: true
-    buildFilter:
-      paths:
-        - frontend/**
-    repo: https://github.com/Zero-Day-Smile/Butterfly-Simulator
-    branch: main
-    rootDir: frontend
-    ports:
-      - 5173
-    dependsOn:
-      - shockwave-backend
+      - type: web
+        name: shockwave-frontend
+        env: node
+        buildCommand: npm install
+        startCommand: npm run dev -- --host
+        plan: free
+        autoDeploy: true
+        buildFilter:
+          paths:
+            - frontend/**
 
-  - type: redis
-    name: shockwave-redis
-    plan: free
+      - type: redis
+        name: shockwave-redis
+        plan: free
