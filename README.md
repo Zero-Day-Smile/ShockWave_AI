@@ -1,4 +1,4 @@
-# 🦋 Economic Butterfly Effect Simulator
+# ⚡ ShockWave AI
 
 An interactive platform for understanding how small economic changes cascade into major macroeconomic outcomes.
 
@@ -56,7 +56,7 @@ Without a key the app runs on realistic synthetic baseline data.
 
 shockwave-ai/
 ```
-butterfly-simulator/
+shockwave-ai/
 ├── frontend/          # Vite + React app
 │   └── src/
 │       ├── components/
@@ -86,7 +86,7 @@ butterfly-simulator/
 |--------|------|-------------|
 | GET | /reality/snapshot | Current economic state + risk scores |
 | GET | /reality/history | Historical indicator time series |
-| POST | /simulate/run | Run butterfly propagation |
+| POST | /simulate/run | Run ShockWave AI propagation |
 | POST | /predict/score | ML risk scoring |
 | POST | /predict/explain | SHAP explanation + narrative |
 | GET | /crises/library | Historical crisis library |
