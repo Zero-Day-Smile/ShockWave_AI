@@ -1,4 +1,4 @@
-# 🦋 Economic Butterfly Effect Simulator
+# ⚡ ShockWave AI
 
 An interactive platform for understanding how small economic changes cascade into major macroeconomic outcomes.
 
