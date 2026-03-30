@@ -1,9 +1,9 @@
 {
-  "name": "shockwave-ai",
+  "name": "economic-butterfly-simulator",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://zero-day-smile.github.io/ShockWave-AI/",
+  "homepage": "https://zero-day-smile.github.io/Butterfly-Simulator/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
